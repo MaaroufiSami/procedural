@@ -1,0 +1,35 @@
+PROCEDURE vector(v1,v2){}
+VAR
+    i,r:INTEGER;
+    i=0
+    r=0;
+    
+BEGIN
+    FOR i FROM 0 TO v1.length-1 step  DO
+        r:=v1[i]*v2[i];
+    END_FOR
+END}
+
+FOR i FROM 0 TO v1.length-1 step  DO
+    FOR j FROM min TO v2.length-1 STEP step  DO
+        IF (vector(v1[i],v2[j])=0) THEN
+            write (v1 +"et"+"are orthogonal")
+        END_IF
+    END_FOR
+END_FOR
+
+
+
+FUNCTION vector(v1,v2) : 
+VAR
+    i,r:INTEGER;
+    i=0
+    r=0;
+    
+BEGIN
+    FOR i FROM 0 TO v1.length-1 step  DO
+        r:=v1[i]*v2[i];
+    END_FOR
+
+    return r 
+END
